@@ -1,30 +1,10 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-    <head>
-        <title>/ascii/</title>
-        <link href="/stylesheets/asciichan_style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1>/ascii/</h1>
-        <form method="post">
-		    <label>
-		        <div>title</div> <input type="text" name="title" 
-                                        value="{{title}}">
-		    </label>
-		    <label>
-		        <div>art</div> <textarea name="art">{{art}}</textarea>
-		    </label>
-		    <div class="error">{{error}}</div>
-		    <input type="submit">
+{% block content %}
 
-		</form>
-        <hr>
-        {% for art in arts %}
-        <div class="art">
-            <div class="art-title">{{art.title}}</div>
-            <pre class="art-body">{{art.art}}</pre>
-        </div>
-        {% endfor %}
-    </body>
-</html>
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+{% endblock %}
