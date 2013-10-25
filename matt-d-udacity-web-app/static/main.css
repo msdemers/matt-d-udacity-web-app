@@ -3,9 +3,10 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
 
-    width: 800px;
-    margin: 0 auto;
+    
+    margin: 10 auto;
     padding: 10px;
+    border: 5px solid gray;
     color: #333;
 }
 
@@ -14,6 +15,14 @@ body {
     color: gray;
     position: absolute;
     top: 10px;
+    right: 10px;
+}
+
+.query-log-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    bottom: 10px;
     right: 10px;
 }
 
@@ -77,6 +86,9 @@ input[type=submit] {
     text-decoration: none;
 }
 
+.main-title:hover {
+    text-decoration: underline;
+}
 .post + .post {
     margin-top: 15px;
 }
@@ -89,8 +101,17 @@ input[type=submit] {
 .post-title {
     font-size: 24px;
     font-weight: bold;
+    color: black;
+    text-decoration: none
 }
 
+.post-title:visited {
+    
+}
+
+.post-title:hover {
+    text-decoration: underline;
+}
 .post-date {
     position: absolute;
     right: 0px;
@@ -101,5 +122,6 @@ input[type=submit] {
 
 .post-content {
     margin-top: 5px;
+    word-wrap:break-word;
 }
 

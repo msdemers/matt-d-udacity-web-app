@@ -2,4 +2,8 @@
 
 {% block content %}
   {{post.render() | safe}}
+  <br><br>
+  <div class="query-log-area">
+    Queried {{cache_age}} seconds ago
+  </div>
 {% endblock %}
